@@ -1,6 +1,10 @@
 {
+  "node_modules/vue3-json-viewer/dist/icon.svg": {
+    "file": "assets/icon-BsRZeFId.svg",
+    "src": "node_modules/vue3-json-viewer/dist/icon.svg"
+  },
   "resources/js/app.ts": {
-    "file": "assets/app-BpeL9CeZ.js",
+    "file": "assets/app-nj9m14Xx.js",
     "name": "app",
     "src": "resources/js/app.ts",
     "isEntry": true,
@@ -8,11 +12,11 @@
       "resources/js/pages/Dashboard.vue"
     ],
     "css": [
-      "assets/app-BAt4SU15.css"
+      "assets/app-DGfCd1RD.css"
     ]
   },
   "resources/js/pages/Dashboard.vue": {
-    "file": "assets/Dashboard-43mXrn6e.js",
+    "file": "assets/Dashboard-C2Rqx6eL.js",
     "name": "Dashboard",
     "src": "resources/js/pages/Dashboard.vue",
     "isDynamicEntry": true,
@@ -20,7 +24,10 @@
       "resources/js/app.ts"
     ],
     "css": [
-      "assets/Dashboard-BUg3ejCK.css"
+      "assets/Dashboard-s1CO8E9E.css"
+    ],
+    "assets": [
+      "assets/icon-BsRZeFId.svg"
     ]
   }
 }
