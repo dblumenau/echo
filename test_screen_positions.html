@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Screen Position Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #1a1a1a;
+            color: white;
+        }
+        .info {
+            text-align: center;
+            font-size: 48px;
+        }
+        .position {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <div id="screen-number">Screen Test</div>
+        <div class="position" id="position"></div>
+    </div>
+    <script>
+        // Get URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const screenNum = params.get('screen') || 'Unknown';
+        const xPos = params.get('x') || '0';
+        
+        document.getElementById('screen-number').textContent = `Screen ${screenNum}`;
+        document.getElementById('position').textContent = `X Position: ${xPos}`;
+    </script>
+</body>
+</html>
