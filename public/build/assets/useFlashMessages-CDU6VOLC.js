@@ -1,0 +1,1 @@
+import{n as e,z as i}from"./app-CUGVbddP.js";import{t as o}from"./AppLayout.vue_vue_type_script_setup_true_lang-CW_8Ma9s.js";function u(){const n=e(),r=()=>{const s=n.props.flash;s!=null&&s.success&&o.success(s.success),s!=null&&s.error&&o.error(s.error),s!=null&&s.warning&&o.warning(s.warning),s!=null&&s.info&&o.info(s.info)};return i(()=>{r()}),{showFlashMessages:r}}export{u};
