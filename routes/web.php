@@ -12,7 +12,7 @@ Route::get('/', function () {
 Route::get('/dashboard', [EchoController::class, 'index'])->name('dashboard');
 
 // 3DS Method callback - needs special handling
-Route::post('/echo/3ds-method-notification', [EchoController::class, 'threeDSMethodCallback']);
+Route::any('/echo/3ds-method-notification', [EchoController::class, 'threeDSMethodCallback']);
 
 // Echo endpoints - publicly accessible
 Route::any('/echo/{path}', [EchoController::class, 'store'])->where('path', '.*');

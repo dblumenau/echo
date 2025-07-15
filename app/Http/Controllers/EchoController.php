@@ -21,10 +21,7 @@ class EchoController extends Controller
             'response_status' => 200,
         ]);
 
-        return response()->json([
-            'message' => 'Request stored successfully',
-            'timestamp' => now()->toIso8601String(),
-        ], 200);
+        return view('testiframepost', ['details' => $request]);
     }
 
     public function index()
@@ -32,7 +29,7 @@ class EchoController extends Controller
         $requests = EchoRequest::latest()->paginate(20)->through(function ($request) {
             return $request;
         })->withQueryString();
-        
+
         return Inertia::render('Dashboard', [
             'requests' => $requests,
         ]);
@@ -52,8 +49,7 @@ class EchoController extends Controller
             'response_status' => 200,
         ]);
 
-        // Return HTML that posts a message to the parent window
-        return response('<html><body><script>window.parent.postMessage("3DSMethodComplete", "*");</script></body></html>')
-            ->header('Content-Type', 'text/html');
+        // Return the iframe post view with request details
+        return view('3dsecureMethodiFrame', ['details' => $request]);
     }
 }

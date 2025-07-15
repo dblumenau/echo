@@ -58,8 +58,8 @@ const hasAnySectionExpanded = computed(() =>
         :open="open"
         @update:open="emit('update:open', $event)"
     >
-        <SheetContent class="w-[700px] sm:w-[800px] sm:max-w-none">
-            <SheetHeader>
+        <SheetContent class="w-[90vw] max-w-[1400px] sm:max-w-none h-[95vh] flex flex-col">
+            <SheetHeader class="flex-shrink-0">
                 <SheetTitle class="flex items-center justify-between">
                     <div class="flex items-center gap-2">
                         Request Details
@@ -93,34 +93,40 @@ const hasAnySectionExpanded = computed(() =>
                 </SheetDescription>
             </SheetHeader>
             
-            <div class="h-[calc(100vh-120px)] mt-6 overflow-y-auto pr-4">
-                <div v-if="request" class="space-y-4">
-                    <!-- Basic Info -->
-                    <RequestDetailsBasic
-                        :request="request"
-                        v-model:expanded="expandedSections.basic"
-                    />
+            <div class="flex-1 overflow-y-auto mt-6 pr-4">
+                <div v-if="request" class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                    <!-- Left Column -->
+                    <div class="space-y-4">
+                        <!-- Basic Info -->
+                        <RequestDetailsBasic
+                            :request="request"
+                            v-model:expanded="expandedSections.basic"
+                        />
 
-                    <!-- Query Parameters -->
-                    <RequestDetailsQuery
-                        v-if="request.query_params && Object.keys(request.query_params).length > 0"
-                        :query-params="request.query_params"
-                        v-model:expanded="expandedSections.query"
-                    />
+                        <!-- Headers -->
+                        <RequestDetailsHeaders
+                            :headers="request.headers"
+                            v-model:expanded="expandedSections.headers"
+                        />
 
-                    <!-- Headers -->
-                    <RequestDetailsHeaders
-                        :headers="request.headers"
-                        v-model:expanded="expandedSections.headers"
-                    />
+                        <!-- Query Parameters -->
+                        <RequestDetailsQuery
+                            v-if="request.query_params && Object.keys(request.query_params).length > 0"
+                            :query-params="request.query_params"
+                            v-model:expanded="expandedSections.query"
+                        />
+                    </div>
 
-                    <!-- Request Body -->
-                    <RequestDetailsBody
-                        v-if="request.body"
-                        :body="request.body"
-                        :headers="request.headers"
-                        v-model:expanded="expandedSections.body"
-                    />
+                    <!-- Right Column -->
+                    <div class="space-y-4">
+                        <!-- Request Body -->
+                        <RequestDetailsBody
+                            v-if="request.body"
+                            :body="request.body"
+                            :headers="request.headers"
+                            v-model:expanded="expandedSections.body"
+                        />
+                    </div>
                 </div>
             </div>
         </SheetContent>

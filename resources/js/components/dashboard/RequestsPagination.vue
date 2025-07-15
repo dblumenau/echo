@@ -40,9 +40,8 @@ const goToPage = (url: string | null) => {
                 size="sm"
                 :disabled="!link.url"
                 @click="goToPage(link.url)"
-            >
-                {{ link.label }}
-            </Button>
+                v-html="link.label"
+            />
         </div>
     </div>
 </template>
