@@ -14,9 +14,9 @@ defineProps<Props>();
 
 <template>
     <img 
-        src="/swift_danish_logo.png" 
-        alt="Swift Danish Logo" 
-        :class="className" 
+        src="/images/logo.png" 
+        alt="Echo Server Logo" 
+        :class="[className, 'rounded-md']" 
         v-bind="$attrs"
     />
 </template>

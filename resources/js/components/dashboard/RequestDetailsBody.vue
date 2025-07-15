@@ -58,9 +58,9 @@ const formattedBody = computed(() => formatRequestBody(props.body, props.headers
                     <div v-if="formattedBody?.type === 'json'" class="dashboard-json-viewer-container">
                         <JsonViewer 
                             :value="formattedBody.data"
-                            :theme="'jv-light'"
+                            theme="light"
                             :expanded="true"
-                            :expandDepth="3"
+                            :expand-depth="2"
                             copyable
                             boxed
                             sort

@@ -15,6 +15,68 @@
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
+/* Override vue3-json-viewer styles for GitHub theme */
+.dashboard-json-viewer-container .jv-light {
+    background: transparent !important;
+    color: #24292e !important;
+    font-size: 0.875rem !important;
+    line-height: 1.6 !important;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace !important;
+}
+
+.dashboard-json-viewer-container .jv-light .jv-key {
+    color: #0550ae !important;
+    font-weight: 600 !important;
+}
+
+.dashboard-json-viewer-container .jv-light .jv-item.jv-string {
+    color: #0a3069 !important;
+}
+
+.dashboard-json-viewer-container .jv-light .jv-item.jv-number {
+    color: #0550ae !important;
+    font-weight: 500 !important;
+}
+
+.dashboard-json-viewer-container .jv-light .jv-item.jv-boolean {
+    color: #0550ae !important;
+    font-weight: 600 !important;
+}
+
+.dashboard-json-viewer-container .jv-light .jv-item.jv-null {
+    color: #6e7781 !important;
+    font-weight: 600 !important;
+}
+
+/* Dark mode styles */
+.dark .dashboard-json-viewer-container .jv-light {
+    color: #e6edf3 !important;
+}
+
+.dark .dashboard-json-viewer-container .jv-light .jv-key {
+    color: #7ee787 !important;
+    font-weight: 600 !important;
+}
+
+.dark .dashboard-json-viewer-container .jv-light .jv-item.jv-string {
+    color: #a5d6ff !important;
+}
+
+.dark .dashboard-json-viewer-container .jv-light .jv-item.jv-number {
+    color: #79c0ff !important;
+    font-weight: 500 !important;
+}
+
+.dark .dashboard-json-viewer-container .jv-light .jv-item.jv-boolean {
+    color: #ff7b72 !important;
+    font-weight: 600 !important;
+}
+
+.dark .dashboard-json-viewer-container .jv-light .jv-item.jv-null {
+    color: #8b949e !important;
+    font-weight: 600 !important;
+}
+
 /* Collapsible section styling */
 .dashboard-collapsible-section {
     border-radius: var(--radius-lg);
@@ -106,147 +168,6 @@
     word-break: break-all;
 }
 
-/* Override vue3-json-viewer styles for GitHub theme */
-.dashboard-json-viewer-container .jv-light {
-    background: transparent !important;
-    color: #24292e !important;
-    font-size: 0.875rem !important;
-    line-height: 1.6 !important;
-    font-family: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace !important;
-}
-
-.dashboard-json-viewer-container .jv-light .jv-ellipsis {
-    color: #586069 !important;
-    background: #dfe2e5 !important;
-    padding: 2px 6px !important;
-    border-radius: 3px !important;
-    font-size: 0.75rem !important;
-}
-
-.dashboard-json-viewer-container .jv-light .jv-button {
-    color: #0969da !important;
-    font-weight: 500 !important;
-}
-
-.dashboard-json-viewer-container .jv-light .jv-button:hover {
-    color: #0860ca !important;
-    text-decoration: underline !important;
-}
-
-.dashboard-json-viewer-container .jv-light .jv-key {
-    color: #0550ae !important;
-    font-weight: 600 !important;
-}
-
-.dashboard-json-viewer-container .jv-light .jv-item.jv-string {
-    color: #0a3069 !important;
-}
-
-.dashboard-json-viewer-container .jv-light .jv-item.jv-number {
-    color: #0550ae !important;
-    font-weight: 500 !important;
-}
-
-.dashboard-json-viewer-container .jv-light .jv-item.jv-boolean {
-    color: #0550ae !important;
-    font-weight: 600 !important;
-}
-
-.dashboard-json-viewer-container .jv-light .jv-item.jv-null {
-    color: #6e7781 !important;
-    font-weight: 600 !important;
-}
-
-.dashboard-json-viewer-container .jv-light .jv-item.jv-undefined {
-    color: #6e7781 !important;
-    font-weight: 600 !important;
-}
-
-.dashboard-json-viewer-container .jv-light .jv-item.jv-object,
-.dashboard-json-viewer-container .jv-light .jv-item.jv-array {
-    color: #24292e !important;
-}
-
-.dashboard-json-viewer-container .jv-light .jv-push {
-    margin-left: 1.25rem !important;
-}
-
-/* Add syntax highlighting for brackets and punctuation */
-.dashboard-json-viewer-container .jv-light .jv-node:before,
-.dashboard-json-viewer-container .jv-light .jv-node:after {
-    color: #24292e !important;
-    font-weight: 400 !important;
-}
-
-/* Dark mode styles */
-.dark .dashboard-json-viewer-container .jv-light {
-    color: #e6edf3 !important;
-}
-
-.dark .dashboard-json-viewer-container .jv-light .jv-ellipsis {
-    color: #8b949e !important;
-    background: #30363d !important;
-}
-
-.dark .dashboard-json-viewer-container .jv-light .jv-button {
-    color: #58a6ff !important;
-}
-
-.dark .dashboard-json-viewer-container .jv-light .jv-button:hover {
-    color: #79c0ff !important;
-    text-decoration: underline !important;
-}
-
-.dark .dashboard-json-viewer-container .jv-light .jv-key {
-    color: #7ee787 !important;
-    font-weight: 600 !important;
-}
-
-.dark .dashboard-json-viewer-container .jv-light .jv-item.jv-string {
-    color: #a5d6ff !important;
-}
-
-.dark .dashboard-json-viewer-container .jv-light .jv-item.jv-number {
-    color: #79c0ff !important;
-    font-weight: 500 !important;
-}
-
-.dark .dashboard-json-viewer-container .jv-light .jv-item.jv-boolean {
-    color: #ff7b72 !important;
-    font-weight: 600 !important;
-}
-
-.dark .dashboard-json-viewer-container .jv-light .jv-item.jv-null {
-    color: #8b949e !important;
-    font-weight: 600 !important;
-}
-
-.dark .dashboard-json-viewer-container .jv-light .jv-item.jv-undefined {
-    color: #8b949e !important;
-    font-weight: 600 !important;
-}
-
-.dark .dashboard-json-viewer-container .jv-light .jv-item.jv-object,
-.dark .dashboard-json-viewer-container .jv-light .jv-item.jv-array {
-    color: #e6edf3 !important;
-}
-
-/* Dark mode syntax highlighting for brackets */
-.dark .dashboard-json-viewer-container .jv-light .jv-node:before,
-.dark .dashboard-json-viewer-container .jv-light .jv-node:after {
-    color: #e6edf3 !important;
-    font-weight: 400 !important;
-}
-
-/* Copy button styling in JSON viewer */
-.dashboard-json-viewer-container .jv-light .jv-copy {
-    opacity: 0.6 !important;
-    transition: opacity 0.2s;
-}
-
-.dashboard-json-viewer-container .jv-light .jv-copy:hover {
-    opacity: 1 !important;
-}
 
 /* Headers list styling */
 .dashboard-headers-list {

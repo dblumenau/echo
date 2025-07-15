@@ -4,7 +4,7 @@
     "src": "node_modules/vue3-json-viewer/dist/icon.svg"
   },
   "resources/js/app.ts": {
-    "file": "assets/app-nj9m14Xx.js",
+    "file": "assets/app-B_9ZGE0L.js",
     "name": "app",
     "src": "resources/js/app.ts",
     "isEntry": true,
@@ -12,11 +12,11 @@
       "resources/js/pages/Dashboard.vue"
     ],
     "css": [
-      "assets/app-DGfCd1RD.css"
+      "assets/app-bqBTE3Ls.css"
     ]
   },
   "resources/js/pages/Dashboard.vue": {
-    "file": "assets/Dashboard-C2Rqx6eL.js",
+    "file": "assets/Dashboard-9ZT97vH5.js",
     "name": "Dashboard",
     "src": "resources/js/pages/Dashboard.vue",
     "isDynamicEntry": true,
@@ -24,7 +24,7 @@
       "resources/js/app.ts"
     ],
     "css": [
-      "assets/Dashboard-s1CO8E9E.css"
+      "assets/Dashboard-Dxud5pAq.css"
     ],
     "assets": [
       "assets/icon-BsRZeFId.svg"

@@ -4,6 +4,7 @@ import path from 'path';
 import tailwindcss from "@tailwindcss/vite";
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
     plugins: [
@@ -20,6 +21,20 @@ export default defineConfig({
                     includeAbsolute: false,
                 },
             },
+        }),
+        viteStaticCopy({
+            targets: [
+                {
+                    // Copy all images from resources/images to public root and images folder
+                    src: 'resources/images/**/*',
+                    dest: '../images',
+                },
+                {
+                    // Also copy logo.png specifically to public root for favicon usage
+                    src: 'resources/images/logo.png',
+                    dest: '.',
+                },
+            ],
         }),
     ],
     resolve: {
